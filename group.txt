@@ -1,0 +1,34 @@
+admin panel- file nai
+          
+           - Depertment job opprtunity gula post krbe(UA/grader type) segula student ra dekte parbe and etar interface ta usual job post er moto dekhabe              student k box akare na
+
+Q/A- student question upload krte parbe na but dekhte parbe and download krte parbe(pdf file only)
+
+    - particular course er jonno semester wise question deya thakbe jate search krle oi course er oi semester er tai pawya jay 
+
+    -answer er jono subscription caile admin approve krbe with some payment (or in other way jeta valo mone koren)
+
+UA/Grader- 
+         -applicaton form er upore same page ei database e admind j course gula entry diyece UA or grader er jonno segula dekhabe
+         - form e UA choose krle (course name, section,section er faculty name deya thakbe table akare)
+         - form e grader choose krle (course name, section,section er time deya & faculty name thakbe table akare)
+         -course er moto section o drop box e hobe ....
+
+
+Project proposal- ei option ta profile e thakbe and ei option e gele proposal form and ki ki project ami nije krechi ta dekhabe
+
+                - list option ta asbe eikhane previouse semester er sobar project eikhane dekha jabe and jodi keu prize peye thake tahole position tao dekha                    jabe
+
+teacher - jokhon kono project proposal asbe tokhon notify hobe and red marks uthe thakbe
+
+         -jokhon kono UA/graderapplication asbe tokhon notify hobe and red marks uthe thakbe,teacher only recommand krbe
+
+         - teacher er issue panel - eikhane discriptive box ta thakbe and catagory (drop box type.. example-peen,marker..koyta pen or marker lagbe)
+         
+         - teacher jei jei jinis er jonno apply kreche seita teacher nijeo dekhte parbe and jeitar jonno apply kreche oita pending ache kina tao dekhte parbe
+
+Profile/home page- potita home page er design thik thekte hobe..specially student der ta and eikhane student er cv download er option tao asbe..jate tader profile page tai cv under e download hoye jay
+
+
+sob stakeholder der jonno e ekta help pannel thakbe jeno system ta use krte subidha hoy & system er motivation ta jeno bujhe
+

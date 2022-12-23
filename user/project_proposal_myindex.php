@@ -31,7 +31,7 @@
     <div class="sl-pagebody">
         <!-- MAIN CONTENT -->
         <div class="card pd-20 pd-sm-40">
-            <h6 class="card-body-title">Project Proposals Details</h6>
+            <h6 class="card-body-title">My Project Details</h6>
 
 
 

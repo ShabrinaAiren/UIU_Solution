@@ -42,7 +42,7 @@
 
         <div class="card pd-20 pd-sm-40">
             <h6 class="card-body-title">Requsition Form</h6>
-            <p class="mg-b-20 mg-sm-b-30">A form for UA & Grader</p>
+            <p class="mg-b-20 mg-sm-b-30">A form for Requsition</p>
             <form action="action.php" method="POST" enctype="multipart/form-data">
                 <div class="form-layout">
 

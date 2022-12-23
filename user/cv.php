@@ -72,7 +72,13 @@ $pdf->SetFont('Times','',14);
     $pdf->Ln(10);
 
     if(!empty($myprojects)){
-        $pdf->Cell(0, 6, 'My Achievements:', 0, 1);
+         $pdf->Cell(0, 6, 'CAREER OBJECTIVE:', 0, 1);
+          $pdf->Ln(5);
+        $pdf->Cell(0, 6, 'I enjoy interactive fields and want to be related with education and research which may enable', 0, 1);
+        $pdf->Cell(0, 6, 'me to explore the learning process to the maximum and have a passion to contribute to the field', 0, 1);
+        $pdf->Cell(0, 6, 'I can demonstrate myself as a person of professional excellence.', 0, 1);
+         $pdf->Ln(5);
+         $pdf->Cell(0, 6, 'ACHIVMENTS:', 0, 1);
         $pdf->Ln(5);
         
         function findCourse($db, $id){
@@ -90,11 +96,19 @@ $pdf->SetFont('Times','',14);
             $pdf->Cell(0, 6, 'Course: '. findCourse($db,$project['course_id']), 0, 1);
             $pdf->Cell(0, 6, 'Supervisor: '. $project['supervisor'], 0, 1);
             $pdf->Cell(0, 6, 'Team Mates: '. $project['team'], 0, 1);
-            $pdf->Cell(0, 6, 'Project Status: '. $project['position'], 0, 1);
+            $pdf->Cell(0, 6, 'Project Position: '. $project['position'], 0, 1);
             $pdf->Cell(0, 6, 'Project Trimester: '. $project['trimester'], 0, 1);
             $pdf->Cell(0, 6, 'Project Description: '.$project['details'], 0, 1, 'L');
             $pdf->Ln(8);
         }
+        $pdf->Cell(0, 6, 'DISCLAIMER:', 0, 1);
+        $pdf->Cell(0, 6, 'I hereby declare that all the statements in this resume are authentic, complete and correct', 0, 1);
+         $pdf->Cell(0, 6, 'according to my knowledge and beliefs.', 0, 1);
+        $pdf->Ln(5);
+         $pdf->Cell(0, 6, '__________________', 0, 1);
+          $pdf->Cell(0, 6, 'Signature With Date', 0, 1);
+        $pdf->Ln(5);
+      
         
         
     }

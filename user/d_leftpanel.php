@@ -6,13 +6,18 @@
 
     <label class="sidebar-label">Categories</label>
     <div class="sl-sideleft-menu">
-
+         <a href="index.php" class="sl-menu-link">
+            <div class="sl-menu-item">
+                <i class="menu-item-icon icon ion-ios-home-outline tx-22"></i>
+                <span class="menu-item-label">Dashboard</span>
+            </div><!-- menu-item -->
+        </a><!-- sl-menu-link -->
 
 
         <a href="#" class="sl-menu-link">
             <div class="sl-menu-item">
                 <i class="menu-item-icon ion-ios-pie-outline tx-20"></i>
-                <span class="menu-item-label">Q/A Solutions</span>
+                <span class="menu-item-label">Questions & Solutions</span>
                 <i class="menu-item-arrow fa fa-angle-down"></i>
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
@@ -31,14 +36,14 @@
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
             <li class="nav-item"><a href="ua_grader_form.php" class="nav-link">Apply Form</a></li>
-            <li class="nav-item"><a href="ua_grader_index.php" class="nav-link">List</a></li>
+            <li class="nav-item"><a href="ua_grader_index.php" class="nav-link">Application List</a></li>
         </ul>
 
 
         <a href="#" class="sl-menu-link">
             <div class="sl-menu-item">
                 <i class="menu-item-icon ion-ios-pie-outline tx-20"></i>
-                <span class="menu-item-label">Project Proposal</span>
+                <span class="menu-item-label">Projects</span>
                 <i class="menu-item-arrow fa fa-angle-down"></i>
             </div><!-- menu-item -->
         </a><!-- sl-menu-link -->

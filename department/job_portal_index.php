@@ -1,16 +1,5 @@
 <?php require 'd_header.php' ?>
 
-<?php 
-  
-    require 'custom_function.php';
-  
-    $user_id = $_SESSION['user_id'];
-
-    $list = fetch_all_data_usingPDO($pdo,"select * from project_proposal where status = 1 order by id desc");
- 
-
-?>
-
 <!-- ########## START: LEFT PANEL ########## -->
 <?php require 'd_leftpanel.php' ?>
 <!-- ########## END: LEFT PANEL ########## -->
@@ -25,67 +14,60 @@
 <div class="sl-mainpanel">
     <nav class="breadcrumb sl-breadcrumb">
         <a class="breadcrumb-item" href="index.php">UIU Solution</a>
-        <span class="breadcrumb-item active">Project Proposals List</span>
+        <span class="breadcrumb-item active">Dashboard</span>
     </nav>
 
-    <div class="sl-pagebody">
-        <!-- MAIN CONTENT -->
-        <div class="card pd-20 pd-sm-40">
-            <h6 class="card-body-title">Project Proposals Details</h6>
+
+    <!-- MAIN CONTENT -->
+    <?php 
+            require 'custom_function.php';
+            // session_start();
+            $id = $_SESSION['user_id'];
+            $user = fetch_all_data_usingDB($db, "select * from user where id = '$id'");
+            $jobs = fetch_all_data_usingPDO($pdo, "select * from job_portal order by id desc");
+    ?>
 
 
+    <?php 
+    if(!empty($jobs)){
+        ?>
+    <div class="row">
 
-            <div class="table-wrapper">
-                <table id="myTable" class="table display responsive nowrap">
-                    <thead>
-                        <tr>
-                            <th>SL</th>
-                            <th>Project Name</th>
-                            <th>Supervisor</th>
-                            <th>Trimester</th>
-                            <th>Action</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        <?php
-
-                    foreach ($list as $key => $data) {
-                ?>
-
-                        <tr>
-
-                            <td><?php echo $key+1; ?></td>
-                            <td><?php echo $data['title']; ?></td>
-                            <td><?php echo $data['supervisor']; ?></td>
-                            <td><?php echo $data['trimester']; ?></td>
-
-                            <td>
-                                <a href="project_proposal_view.php?id=<?= $data['id'] ?>"
-                                    class="btn btn-primary">View</a>
-                            </td>
-
-                        </tr>
-
-                        <?php
-                    }
-
-                ?>
-
-
-
-                    </tbody>
-
-                </table>
-
-
-            </div><!-- table-wrapper -->
+        <div class="col-md-12">
+            <h3 class="text-center mb-3 mt-3">Job Portal</h3>
         </div>
+        <?php 
+            foreach($jobs as $job){
+
+        ?>
+        <div class="col-md-4">
+            <div class="sl-pagebody">
+                <a href="job_details.php?id=<?= $job['id'] ?>">
+                    <div class="card pd-20 pd-sm-40"
+                        style="border-radius:25px;border: 2px solid white;background-color:white;padding:15px;color:black;">
+                        <h6><?= $job['title'] ?></h6>
+                        <span><?= $job['dept'] ?></span>
+                        <span>Deadline: <?= date('d M, Y', strtotime($job['deadline']))?></span>
+                        <span>Company: <?= $job['company'] ?></span>
+                        <span>posted: <?= date('d M, Y', strtotime($job['created_at'])) ?></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <?php
+            }
+                
+        ?>
+    </div>
+    <?php
+    }
+?>
 
 
-    </div><!-- sl-pagebody -->
-    <!-- END MAIN CONTENT -->
+
+
+
+
 
 
     <?php require 'd_footer.php' ?>
@@ -93,15 +75,6 @@
 <!-- ########## END: MAIN PANEL ########## -->
 
 <?php require 'd_javascript.php' ?>
-
-
-<script>
-$('#myTable').DataTable({
-    bLengthChange: true,
-    searching: true,
-    responsive: true
-});
-</script>
 </body>
 
 </html>
